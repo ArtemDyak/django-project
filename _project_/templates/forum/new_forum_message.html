@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'css/forms.css'%}">
+</head>
+<body>
+    <div class="formWrapper">
+    <form method="post" action="">
+        {% for field in form %}
+        <div class="formFieldWrapper">
+            <label> {{ field.label }} </label>
+            {{ field }}
+        </div>
+        {% endfor %}
+        <div class="formSubmitWrapper">
+            <input type="submit" >
+        </div>
+    </form>
+</div>
+</body>
+</html>
